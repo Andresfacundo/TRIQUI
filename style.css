@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 1rem;
+  /* color: #adff2f; */
+  animation: neon 1s infinite;
+}
+
+@keyframes moverTexto {
+
+  0%,
+  100% {
+    transform: translateX(-10px);
+    color: #522fff;
+    text-shadow: 0 0 8px #ffffff;
+  }
+
+  50% {
+    transform: translateX(10px);
+    color: aqua;
+    text-shadow: 0 0 8px #ffffff;
+  }
+}
+
+#textoMovible {
+  animation: moverTexto 3s ease-in-out infinite;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(/Images/fondo.avif);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.2rem;
+}
+
+button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 3.5rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgb(75, 73, 75);
+  /* box-shadow: 0 0 10px #ffffff; */
+}
